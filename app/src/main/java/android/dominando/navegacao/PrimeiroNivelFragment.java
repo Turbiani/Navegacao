@@ -36,7 +36,7 @@ public class PrimeiroNivelFragment extends Fragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAcoes = new LinkedHashMap<>();
-        //mAcoes.put(getString(R.string.opcao_aba), TelaAbasActivity.class);
+        mAcoes.put(getString(R.string.opcao_aba), TelaAbasActivity.class);
         //mAcoes.put(getString(R.string.opcao_spinner), TelaSpinnerActivity.class);
         //mAcoes.put(getString(R.string.opcao_pager), TelaPagerActivity.class);
     }
