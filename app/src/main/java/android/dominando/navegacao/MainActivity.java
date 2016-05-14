@@ -2,6 +2,7 @@ package android.dominando.navegacao;
 
 import android.os.PersistableBundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -73,5 +74,18 @@ public class MainActivity extends AppCompatActivity {
         mOpcaoSelecionada = menuItem.getItemId();
         menuItem.setChecked(true);
         mDrawerLayout.closeDrawers();
+
+        String titulo = menuItem.getTitle().toString();
+
+        FragmentManager fm = getSupportFragmentManager();
+
+        if(fm.findFragmentByTag(titulo) == null){
+            PrimeiroNivelFragment primeiroNivelFragment = PrimeiroNivelFragment.novaInstancia(titulo);
+
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.conteudo, primeiroNivelFragment, titulo)
+                    .commit();
+        }
     }
 }
