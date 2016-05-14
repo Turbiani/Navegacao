@@ -21,6 +21,7 @@ public class TelaAbasActivity extends AppCompatActivity {
         setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
         AbasPagerAdapter pagerAdapter = new AbasPagerAdapter(this,
                 getSupportFragmentManager());
+        //AQUI EU HABILITO A < PARA VOLTAR A HOME
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(pagerAdapter);
