@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         if(savedInstanceState == null){
+            //AQUI EU FORÇO QUE AO INICIAR A APP O ITEM ABA JÁ VENHA SELECIONADO
             mOpcaoSelecionada = R.id.action_aba;
         }else{
             mOpcaoSelecionada = savedInstanceState.getInt("menuItem");

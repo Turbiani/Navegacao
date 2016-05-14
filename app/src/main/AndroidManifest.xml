@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +24,13 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity android:name=".TelaSpinnerActivity"
+            android:theme="@style/BaseTheme"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity android:name=".TelaPagerActivity"
             android:theme="@style/BaseTheme"
             android:parentActivityName=".MainActivity">
             <meta-data
