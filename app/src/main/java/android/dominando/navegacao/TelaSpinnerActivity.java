@@ -69,6 +69,13 @@ public class TelaSpinnerActivity extends AppCompatActivity
                         titulosAbas[position],
                         bgColors.getColor(position, 0),
                         textColors.getColor(position, 0));
+
+        /*getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container, fragment)
+                .commit();*/
+
+
+        //NOVA FORMA SECAO EMPILHANDO FRAGMENTOS DO CAPITULO 6
         FragmentManager fm = getSupportFragmentManager();
         Fragment f = fm.findFragmentByTag("tag");
         FragmentTransaction ft = fm.beginTransaction();
